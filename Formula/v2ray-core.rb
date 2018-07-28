@@ -6,10 +6,9 @@ class V2rayCore < Formula
   sha256 "93e0fa7a329fb0be29a194ce9567f152d5679ea29db8dda25275c63dfc566fe6"
 
   def install
-    etc.install "config.json"
+    prefix.install Dir["v2ray","v2ctl","geoip.dat","geosite.dat"]
 
-    rm_f Dir["config.json"]
-    prefix.install Dir["*"]
+    etc.install "config.json"
 
   end
 
