@@ -7,10 +7,11 @@ class V2rayCore < Formula
 
   def install
     etc.install "config.json"
-    
+
     rm_f Dir["config.json"]
     libexec.install Dir["*"]
     bin.install_symlink libexec/"v2ray"
+    bin.install_symlink libexec/"v2ctl"
 
   end
 
