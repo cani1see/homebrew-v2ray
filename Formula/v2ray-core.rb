@@ -9,7 +9,7 @@ class V2rayCore < Formula
     etc.install "config.json"
 
     rm_f Dir["config.json"]
-    prefix.install Dir["output/*"]
+    prefix.install Dir["*"]
 
   end
 
