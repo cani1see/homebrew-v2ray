@@ -9,9 +9,7 @@ class V2rayCore < Formula
     etc.install "config.json"
 
     rm_f Dir["config.json"]
-    libexec.install Dir["*"]
-    bin.install_symlink libexec/"v2ray"
-    bin.install_symlink libexec/"v2ctl"
+    prefix.install Dir["output/*"]
 
   end
 
@@ -28,7 +26,7 @@ class V2rayCore < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{bin}/v2ray</string>
+        <string>#{prefix}/v2ray</string>
         <string>-config</string>
         <string>#{etc}/config.json</string>
       </array>
@@ -40,6 +38,6 @@ class V2rayCore < Formula
 end
   
   test do
-    system "#{bin}/v2ray", "-version"
+    system "#{prefix}/v2ray", "-version"
   end
 end
