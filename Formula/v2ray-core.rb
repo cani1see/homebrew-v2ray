@@ -7,6 +7,7 @@ class V2rayCore < Formula
 
   def install
     bin.install "v2ray"
+    bin.install "v2ctl"
 
     etc.install "config.json"
   end

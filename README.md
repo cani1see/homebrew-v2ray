@@ -3,7 +3,7 @@ Homebrew tap for [v2ray-core](https://github.com/v2ray/v2ray-core).
 
 # Install
 ```shell
-brew tap kofj/v2ray
+brew tap cani1see/v2ray
 brew install v2ray-core
 ```
 
