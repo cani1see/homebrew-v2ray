@@ -6,9 +6,12 @@ class V2rayCore < Formula
   sha256 "93e0fa7a329fb0be29a194ce9567f152d5679ea29db8dda25275c63dfc566fe6"
 
   def install
-    bin.install_symlink "v2ray"
-
     etc.install "config.json"
+    
+    rm_f Dir["config.json"]
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"v2ray"
+
   end
 
   plist_options :manual => "v2ray -config=#{HOMEBREW_PREFIX}/etc/config.json"
