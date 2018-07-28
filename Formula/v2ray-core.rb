@@ -10,7 +10,6 @@ class V2rayCore < Formula
 
     rm_f Dir["config.json"]
     prefix.install Dir["*"]
-    bin.install_symlink "v2ray"
 
   end
 
