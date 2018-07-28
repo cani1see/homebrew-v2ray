@@ -6,8 +6,7 @@ class V2rayCore < Formula
   sha256 "93e0fa7a329fb0be29a194ce9567f152d5679ea29db8dda25275c63dfc566fe6"
 
   def install
-    bin.install "v2ray"
-    bin.install "v2ctl"
+    bin.install_symlink "v2ray"
 
     etc.install "config.json"
   end
